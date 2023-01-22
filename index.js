@@ -108,11 +108,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data, error) {
-//     fs.writeFile("README.md", JSON.stringify(data) )
-    
-// // }
-// const writeToFile = fs.writeFile ("README.md", questions =>{
+// function writeToFile(fileName, data) {    
+// }
+// const writeFile = data => 
+//   fs.writeFile ("README.md", data, err =>{
+//     err ? console.error(err) : console.log('README.md generated successfully!')
 
 // })
 
@@ -122,6 +122,7 @@ function init() {
   inquirer.prompt(questions).then((response) => {
     console.log(response);
   });
+
 }
 
 // Function call to initialize app

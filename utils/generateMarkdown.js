@@ -1,6 +1,13 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (!license){
+    return ``;{
+    }else{
+      return 
+    }
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -14,7 +21,34 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
-`;
+  ## Description:
+  ${data.description}
+
+  ## Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contribution](#contribution)
+  * [Test](#test)
+  * [Websites](#websites)
+  * [License](#license)
+  * [Contacts](#contacts)
+
+  ## Installation
+  ${data.description}
+  ## Usage
+  ${data.description}
+  ## Contribution
+  ${data.description}
+  ## Test
+  ${data.description}
+  ## Websites
+  ${data.description}
+  ## License
+  ${data.description}
+  ## Questions
+  If you have additional questions please contact me at ${data.email}, or if you want to see more of my work you can find them at https://github.com/${data.username} 
+  `;
 }
 
 module.exports = generateMarkdown;
