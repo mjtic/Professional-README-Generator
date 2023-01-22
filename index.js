@@ -61,7 +61,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "What is the contribution guideline of your project?",
+    message: "Who is the contributor of this project? or provide guideline",
     name: "contributor",
   },
   {
@@ -108,20 +108,19 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {    
-// }
-// const writeFile = data => 
-//   fs.writeFile ("README.md", data, err =>{
-//     err ? console.error(err) : console.log('README.md generated successfully!')
-
-// })
-
+function writeToFile(fileName, data) {    
+  fs.writeFile (fileName, data, err =>{
+    err ? console.error(err) : console.log('README.md generated successfully!')
+})
+}
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
-    console.log(response);
+    console.log(response) 
+    writeToFile("README.md", generateMarkDown(response)); 
   });
+  
 
 }
 
