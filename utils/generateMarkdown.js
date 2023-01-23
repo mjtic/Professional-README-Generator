@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   if (!license){
     return ``;
     }else {
-      return `[![${data.license} License](https://img.shields.io/badge/License-${license}-yellow.svg)]($(renderLicenseLink(license)})`
+      return `[![${license} License](https://img.shields.io/badge/License-${license}-yellow.svg)](${renderLicenseLink(license)})`
     }
   }
 
@@ -25,14 +25,23 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (!license){
+    return ``;
+  }else{
+    return `This project is under ${license}, for more information please refer to the license badge on top of this README`
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
+${renderLicenseBadge(data.license)}
+
   ## Description:
   ${data.description}
+
 
   ## Table of Contents
 
@@ -55,7 +64,7 @@ function generateMarkdown(data) {
   ## Websites
   ${data.description}
   ## License
-  ${data.license}
+  ${renderLicenseSection(data.license)}
   ## Questions
   If you have additional questions please contact me at ${data.email}, or if you want to see more of my work you can find them at https://github.com/${data.username} 
   `;

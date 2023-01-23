@@ -34,7 +34,7 @@ const questions = [
   },
   //table of conetents skip -due to need of static
   {
-    type: "input",
+    type: "editor",
     message: "What is the installation instruction of your project?",
     name: "installation",
     validate: userInput => {
@@ -47,7 +47,7 @@ const questions = [
     }    
   },
   {
-    type: "input",
+    type: "editor",
     message: "What is the usage information of your project?",
     name: "usage",
     validate: userInput => {
