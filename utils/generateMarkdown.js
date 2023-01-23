@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   if (!license){
     return ``;
     }else {
-      return `[![${license} License](https://img.shields.io/badge/License-${license}-yellow.svg)](${renderLicenseLink(license)})`
+      return `<img src="https://img.shields.io/badge/license-${license}-blue.svg" alt="GitHub License">`
     }
   }
 
